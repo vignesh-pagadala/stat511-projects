@@ -8,6 +8,43 @@ cor(InData, method = c('pearson'))
 # Q1. Pairwise Scatterplot
 pairs(InData, gap = 0, pch = "o")
 
+# Q2. Full Model
+full_model <- lm(BodyFat ~ Triceps + Thigh + Midarm, data=InData)
+summary(full_model)
+
+# Q3. LHT - NULL test
+library(car)
+c1 <- matrix(c(0, 1, 0, 0,
+               0, 0, 1, 0,
+               0, 0, 0, 1), nrow = 3, byrow = TRUE)
+lht(full_model, c1, rhs = c(0, 0, 0))
+
+# Q4. B1 NULL test
+c1 <- c(0, 1, 0, 0)
+lht(full_model, c1, rhs = c(2.0))
+
+# Q5. B2, B3 NULL test
+c1 <- matrix(c(0, 0, 1, 0,
+               0, 0, 0, 1), nrow = 2, byrow = TRUE)
+lht(full_model, c1, rhs = c(0, 0))
+
+# Q6. Eliminating predictors
+temp_model <- lm(BodyFat ~ Triceps + Midarm, data=InData)
+summary(temp_model)
+
+plot(temp_model)
+
+
+nd <- data.frame(Triceps = 20, Midarm = 25)
+predict(temp_model, nd, interval = "confidence")
+
+predict(temp_model, nd, interval = "prediction")
+
+outlierTest(temp_model)
+#---------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------
+
 # Q2. Pearson Correlation Coefficient
 cor(InData, method = c('pearson'))
 
@@ -32,6 +69,8 @@ summary(supplem_model)
 complete_model <- lm(TIME ~ PROTEIN + ANTIBIO + SUPPLEM, data=InData)
 complete_model
 summary(complete_model)
+
+
 
 
 # Q5. Residuals versus Fitted Values
