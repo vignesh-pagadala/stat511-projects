@@ -1,13 +1,45 @@
-InData <- read.csv("/home/vignesh_pagadala/Desktop/STAT512/Homework 2/BodyFat.csv", header = TRUE)
+#1
+InData <- read.csv("/home/vignesh_pagadala/Desktop/STAT512/Homework 3/Grain.csv", header = TRUE)
 InData
+library(ggplot2)
+qplot(Days, Yield, data = InData)
+#2
+model <- lm(Yield ~ Days, data=InData)
+summary(model)
+plot(model)
+#3
+quad_model <- lm(Yield ~ Days + I(Days^2), data = InData)
+quad_model
+summary(quad_model)
+plot(quad_model)
+#4
+cubic_model <- lm(Yield ~ Days + I(Days^2) + I(Days^3), data=InData)
+summary(cubic_model)
+plot(cubic_model)
+#5
+library(car)
+c1 <- matrix(c(0, 1, 0, 0,
+               0, 0, 1, 0,
+               0, 0, 0, 1), nrow = 3, byrow = TRUE)
+lht(cubic_model, c1, rhs = c(0, 0, 0))
+#6
+#7
+NewData <- read.csv("/home/vignesh_pagadala/Desktop/STAT512/Homework 3/DrugTest.csv", header = TRUE)
+NewData
+boxplot(PreTreatment ~ Drug, data = NewData, main = "PreTreatment vs Drug")
+boxplot(PostTreatment ~ Drug, data = NewData, main = "PostTreatment vs Drug")
+qplot(PreTreatment, PostTreatment, shape = factor(Drug), color = factor(Drug), data = NewData)
 
-# This is a test comment.
-# Q1. Pearson Correlation Coefficient
-cor(InData, method = c('pearson'))
 
-# Q1. Pairwise Scatterplot
+
+
+
+
+
+# -----------------------------------------------
+
 pairs(InData, gap = 0, pch = "o")
-
+plot(Days, Yield)
 # Q2. Full Model
 full_model <- lm(BodyFat ~ Triceps + Thigh + Midarm, data=InData)
 summary(full_model)
