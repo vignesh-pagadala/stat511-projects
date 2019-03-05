@@ -28,14 +28,25 @@ NewData <- read.csv("/home/vignesh_pagadala/Desktop/STAT512/Homework 3/DrugTest.
 NewData
 boxplot(PreTreatment ~ Drug, data = NewData, main = "PreTreatment vs Drug")
 boxplot(PostTreatment ~ Drug, data = NewData, main = "PostTreatment vs Drug")
-qplot(PreTreatment, PostTreatment, shape = factor(Drug), color = factor(Drug), data = NewData)
-
-
-
-
-
-
-
+p <- qplot(PreTreatment, PostTreatment, shape = factor(Drug), color = factor(Drug), data = NewData)
+p + geom_smooth(method = lm, se = FALSE)
+#8
+drugmodel <- lm(PostTreatment ~ Drug, data = NewData)
+onewayanova <- anova(drugmodel)
+onewayanova
+library(emmeans)
+emmeans(drugmodel, pairwise ~ Drug)
+#9 
+sdrug_model <- lm(PostTreatment ~ Drug + PreTreatment, data = NewData)
+ancovamodel <- Anova(sdrug_model, type = 3)
+ancovamodel
+emmeans(sdrug_model, pairwise ~ Drug + PreTreatment)
+#10
+#11
+newdrug_model <- lm(I(PostTreatment - PreTreatment) ~ Drug, data = NewData)
+owanova <- anova(newdrug_model)
+owanova
+emmeans(newdrug_model, pairwise ~ Drug)
 # -----------------------------------------------
 
 pairs(InData, gap = 0, pch = "o")
