@@ -1,0 +1,4 @@
+#TITLE: STAT512 week 9 notes.
+#AUTHOR: Vignesh M. Pagadala
+#DATE: 26 Mar 19
+
