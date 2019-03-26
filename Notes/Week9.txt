@@ -11,4 +11,8 @@
    Subscript Notations -
    . - averaging over
    - -
+   Why is 0.05 a significant value for p?
+   
+   
+   Additional Resources - Russell Lenth's website.
    
