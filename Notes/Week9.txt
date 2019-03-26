@@ -2,3 +2,6 @@
 #AUTHOR: Vignesh M. Pagadala
 #DATE: 26 Mar 19
 
+1. Experimental Design
+   * Project proposal due next week.
+   * 
