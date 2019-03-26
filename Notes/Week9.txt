@@ -5,4 +5,10 @@
 1. Experimental Design
    * Project proposal due next week.
    * Treatment and experimental design.
+   * RCB -
+   * Subjective evaluation
+   RCB limitations - hard finding homogenous blocks
+   Subscript Notations -
+   . - averaging over
+   - -
    
