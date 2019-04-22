@@ -3,4 +3,17 @@
 #AUTHOR: Vignesh M. Pagadala
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* 
+
+1. Homework 5
+   ~~~~~~~~~~
+   * The data in question - Ckheart.csv.
+   * Is the amount of CK in a patient's blood a useful indicator of whether a heart attack has taken place? 
+   * Attributes:
+       - CK: Creatinine Kinase
+       - withHA: withHeartAttack
+       - withoutHA: withoutHeartAttack
+   * 
+
+2. Logistic Regression
+   ~~~~~~~~~~~~~~~~~~~
+   * 

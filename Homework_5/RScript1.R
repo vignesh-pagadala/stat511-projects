@@ -2,8 +2,7 @@ library(emmeans)
 library(car)
 library(ggplot2)
 
-#1
-InData <- read.csv("/home/vignesh_pagadala/Desktop/STAT512/Homework 5/CKheart.csv", header = TRUE)
+InData <- read.csv("/home/vignesh_pagadala/Desktop/Course Work/STAT512/Homework_5/CKheart.csv", header = TRUE)
 InData
 
 InData$percentHA <- InData$withHA/(InData$withHA + InData$withoutHA)
