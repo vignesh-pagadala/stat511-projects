@@ -16,4 +16,5 @@
 
 2. Logistic Regression
    ~~~~~~~~~~~~~~~~~~~
+   * Regression Analysis - how one variable varies with change in another variable.
    * 
