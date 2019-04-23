@@ -17,4 +17,6 @@
 2. Logistic Regression
    ~~~~~~~~~~~~~~~~~~~
    * Regression Analysis - how one variable varies with change in another variable.
-   * 
+   * Logistic Regression is the regression analysis done when the Response/Dependent variable is actually dichotomous.
+   *
+   
