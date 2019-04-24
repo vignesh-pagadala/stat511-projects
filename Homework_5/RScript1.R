@@ -32,3 +32,33 @@ BirthData$race <- as.factor(BirthData$race)
 BirthData$smoke <- as.factor(BirthData$smoke)
 str(BirthData)
 
+Table1 <- with( table(race, low), data = BirthData)
+prop.table(Table1, 1)
+
+Table2 <- with( table(smoke, low), data = BirthData)
+prop.table(Table2, 1)
+chisq.test(Table2)
+
+Model1 <- glm(low ~ smoke, family=binomial, data = BirthData)
+library(emmeans)
+emmeans(Model1, ~ smoke, type = "response")
+
+library(MuMIn)
+library(car)
+
+FullModel <- glm(low ~ ., family=binomial, data = BirthData)
+options(na.action = "na.fail")
+dredge(FullModel, rank="AIC")
+
+Model2 <- glm(low ~ mwt + race + smoke, family = binomial, data = BirthData)
+summary(Model2)
+
+Anova(Model2, type = 3)
+
+exp(Model2$coef)
+exp(confint(Model2))
+
+emmeans(Model2, pairwise ~ smoke, type = "response")
+
+library(ResourceSelection)
+hoslem.test(Model2$y, fitted(Model2), g = 10)
