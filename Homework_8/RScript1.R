@@ -77,14 +77,18 @@ emout4$contrasts
 # evidence of an interaction, it does not make sense to look at main effects.
 
 #16
-
-
+# The estimated differences are the SAME.
+# The SEs are DIFFERENT (Combined SE = 0.812, Forb SE = 0.187, Grass SE = 1.13).
+# The df is DIFFERENT (combined df = 24, split df = 12).
 
 #17
-
-
+# The combined analysis showed strong evidence of unequal variance. The model assumptions are
+# better satisfied using the split analyses. (2) The combined analysis showed evidence of a three-way
+# interaction.
 
 #18
+#(1) When we split the analysis we reduce the df (hence reducing power). (2) When we split the
+#analysis we cannot get direct comparisons of Forb versus Grass.
 
 
 
