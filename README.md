@@ -2,7 +2,7 @@
 
 ## About
 
-All projects done for STAT-512 (Design and Data Analysis for Researchers II) course at Colorado State University, during the Fall of 2019. Some of the project domains are indicated below:
+A compendium of all projects done as a part of the STAT-512 (Design and Data Analysis for Researchers II) course at Colorado State University, during the Fall of 2019, taught by Dr. Benjamin Sharp. Some of the project domains are indicated below:
 
 1. Multiple Regression:
 
