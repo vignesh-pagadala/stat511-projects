@@ -1,45 +1,50 @@
 # STAT 512 Projects
 
-> **[?]** 
-> Provide short description for your project here.
-
-
-
----
-
 ## About
 
-> **[?]**
-> Provide general information about your project here.
-> What problem does it (intend to) solve?
-> What is the purpose of your project?
-> Why did you undertake it?
-> You don't have to answer all the questions - just the ones relevant to your project.
+All projects done for STAT-512 (Design and Data Analysis for Researchers II) course at Colorado State University, during the Fall of 2019. Some of the project domains are indicated below:
 
+1. Multiple Regression:
 
+* Basic model, assumptions, hypothesis testing, confidence/prediction intervals
+* Polynomial terms, interactions, ANCOVA
+* Model selection: stepwise selection and AICc/BIC
+* Influence and collinearity diagnostics
+* Generalized linear models: logistic and poison regression
+
+2. Fixed Effects Models:
+
+* Blocked and latin square designs
+* Factorial designs and pairwise comparisons
+* Unbalanced and unreplicated designs.
+
+3. Mixed Effect Models:
+
+* Random effects models
+* Mixed models: crossed and nested factors, randomized complete block design,
+split-plot design, strip-plot design
+* Repeated measures (one/two factors)
 
 ### Built With
 
-> **[?]**
-> Please provide the technologies that are used in the project.
+* R
+* R Studio
 
 ## Getting Started
 
 ### Prerequisites
 
-> **[?]**
-> What are the project requirements/dependencies?
+* R
 
 ### Installation
 
-> **[?]**
-> Proceed to describe how to install and get started with the project.
+To install, clone the GitHub repo:
+
+`git clone https://github.com/vignesh-pagadala/stat-512-projects.git`
 
 ## Usage
 
-> **[?]**
-> How does one go about using it?
-> Provide various use cases and code examples here.
+Open the required project directory through R Studio and run the code.
 
 ## Roadmap
 
@@ -50,9 +55,6 @@ See the [open issues](https://github.com/vignesh-pagadala/stat-512-projects/issu
 - [Newest Bugs](https://github.com/vignesh-pagadala/stat-512-projects/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
 
 ## Support
-
-> **[?]**
-> Provide additional ways to contact the project maintainer/maintainers.
 
 Reach out to the maintainer at one of the following places:
 
@@ -98,6 +100,5 @@ See [LICENSE](LICENSE) for more information.
 
 ## Acknowledgements
 
-> **[?]**
-> If your work was funded by any organization or institution, acknowledge their support here.
-> In addition, if your work relies on other software libraries, or was inspired by looking at other work, it is appropriate to acknowledge this intellectual debt too.
+* Dr. Benjamin Sharp: bensharp@colostate.edu (course instructor).
+* Department of Statistics, Colorado State University.
